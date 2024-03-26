@@ -1,0 +1,94 @@
+# Project: ÏîÄ¿1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o menu2Account.o judge1.o judge2.o regist.o file.o list.o login.o menu2Mode.o menu3Exercise.o simpleTest.o mixingTest.o advancedTest.o test.o test2.o menu3Game.o individualgame.o teamgame.o test3.o logout.o result.o mresult.o tresult.o
+LINKOBJ  = main.o menu2Account.o judge1.o judge2.o regist.o file.o list.o login.o menu2Mode.o menu3Exercise.o simpleTest.o mixingTest.o advancedTest.o test.o test2.o menu3Game.o individualgame.o teamgame.o test3.o logout.o result.o mresult.o tresult.o
+LIBS     = -L"D:/dev/Dev-Cpp/MinGW64/lib" -L"D:/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/dev/Dev-Cpp/MinGW64/include" -I"D:/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/dev/Dev-Cpp/MinGW64/include" -I"D:/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "mental arithmetic.exe"
+CXXFLAGS = $(CXXINCS) -ansi -std=c++11 -g3 -std=c++11
+CFLAGS   = $(INCS) -ansi -std=c++11 -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+menu2Account.o: menu2Account.c
+	$(CC) -c menu2Account.c -o menu2Account.o $(CFLAGS)
+
+judge1.o: judge1.c
+	$(CC) -c judge1.c -o judge1.o $(CFLAGS)
+
+judge2.o: judge2.c
+	$(CC) -c judge2.c -o judge2.o $(CFLAGS)
+
+regist.o: regist.c
+	$(CC) -c regist.c -o regist.o $(CFLAGS)
+
+file.o: file.c
+	$(CC) -c file.c -o file.o $(CFLAGS)
+
+list.o: list.c
+	$(CC) -c list.c -o list.o $(CFLAGS)
+
+login.o: login.c
+	$(CC) -c login.c -o login.o $(CFLAGS)
+
+menu2Mode.o: menu2Mode.c
+	$(CC) -c menu2Mode.c -o menu2Mode.o $(CFLAGS)
+
+menu3Exercise.o: menu3Exercise.c
+	$(CC) -c menu3Exercise.c -o menu3Exercise.o $(CFLAGS)
+
+simpleTest.o: simpleTest.c
+	$(CC) -c simpleTest.c -o simpleTest.o $(CFLAGS)
+
+mixingTest.o: mixingTest.c
+	$(CC) -c mixingTest.c -o mixingTest.o $(CFLAGS)
+
+advancedTest.o: advancedTest.c
+	$(CC) -c advancedTest.c -o advancedTest.o $(CFLAGS)
+
+test.o: test.c
+	$(CC) -c test.c -o test.o $(CFLAGS)
+
+test2.o: test2.c
+	$(CC) -c test2.c -o test2.o $(CFLAGS)
+
+menu3Game.o: menu3Game.c
+	$(CC) -c menu3Game.c -o menu3Game.o $(CFLAGS)
+
+individualgame.o: individualgame.c
+	$(CC) -c individualgame.c -o individualgame.o $(CFLAGS)
+
+teamgame.o: teamgame.c
+	$(CC) -c teamgame.c -o teamgame.o $(CFLAGS)
+
+test3.o: test3.c
+	$(CC) -c test3.c -o test3.o $(CFLAGS)
+
+logout.o: logout.c
+	$(CC) -c logout.c -o logout.o $(CFLAGS)
+
+result.o: result.c
+	$(CC) -c result.c -o result.o $(CFLAGS)
+
+mresult.o: mresult.c
+	$(CC) -c mresult.c -o mresult.o $(CFLAGS)
+
+tresult.o: tresult.c
+	$(CC) -c tresult.c -o tresult.o $(CFLAGS)
